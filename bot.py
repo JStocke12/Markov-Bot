@@ -36,6 +36,6 @@ async def gen(ctx):
 
     out += e
 
-    await ctx.send(out)
+    await ctx.send(out[:4000])
 
 bot.run(decouple.config('TOKEN'))
