@@ -1,10 +1,15 @@
 import discord
 import decouple
+from discord.ext import commands
 
-client = discord.Client()
+bot = commands.Bot(command_prefix="markov.")
 
-@client.event
+@bot.event
 async def on_ready():
     print("online")
 
-client.run(decouple.config('TOKEN'))
+@bot.command()
+async def ping(ctx):
+    await ctx.send("pong")
+
+bot.run(decouple.config('TOKEN'))
