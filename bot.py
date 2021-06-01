@@ -1,5 +1,5 @@
 import discord
-from decouple import config
+import decouple
 
 client = discord.Client()
 
@@ -7,4 +7,4 @@ client = discord.Client()
 async def on_ready():
     print("online")
 
-client.run(config('TOKEN'))
+client.run(decouple.config('TOKEN'))
