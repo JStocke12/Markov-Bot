@@ -17,7 +17,7 @@ async def ping(ctx):
 async def gen(ctx):
     pdict = {}
 
-    parsed = [i.split() for i in open("raw.txt","r",errors="ignore").read().split("\n\n")]
+    parsed = [i.split() for i in open("samples/raw.txt","r",errors="ignore").read().split("\n\n")]
 
     for l in parsed:
         for i,j in zip(l,l[1:]):
